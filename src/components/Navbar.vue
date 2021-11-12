@@ -18,7 +18,7 @@ nav {
   justify-content: space-evenly;
   background-color: #000;
   color: #fff;
-  padding: 40px;
+  padding: 40px 0;
   margin: 0;
   position: absolute;
   bottom: 0;

@@ -1,22 +1,19 @@
 <template>
   <div class="Account">
-    <h1>This is an Account page</h1>
+    <h1>Account</h1>
     <section>
     <div class="user">
         <div class="userprofile"></div>
         <span>User Name</span>
-      </div>
-      <div class="accountmenu">
-        <a href="/browse">
-          <div class="icon">-</div>
-          Edit Profile
-        </a>
-        <a href="/Match"><div class="icon">+</div>Edit Survey</a>
-      </div>
-      <div class="settings">
-        <a href="/account"><div class="icon">-</div>Search Settings</a>
-        <a href="/account"><div class="icon">-</div>Account Settings</a>
-      </div>
+    </div>
+    <div class="accountmenu">
+      <router-link to="/editprofile"><div class="icon">-</div>Edit Profile</router-link>
+      <router-link to="/editsurvey"><div class="icon">+</div>Edit Survey</router-link>
+    </div>
+    <div class="settings">
+      <router-link to="/searchsettings"><div class="icon">-</div>Search Settings</router-link>
+      <router-link to="/acctsettings"><div class="icon">-</div>Account Settings</router-link>
+    </div>
   </section>
   </div>
 </template>
