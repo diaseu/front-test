@@ -36,16 +36,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "AcctSettings" */ '../views/SearchSettings.vue')
   },
   {
-    path: '/acctsettings',
-    name: 'AcctSettings',
-    component: () => import(/* webpackChunkName: "AcctSettings" */ '../views/AcctSettings.vue')
-  },
-  {
-    path: '/acctsettings',
-    name: 'AcctSettings',
-    component: () => import(/* webpackChunkName: "AcctSettings" */ '../views/AcctSettings.vue')
-  },
-  {
     path: '/match',
     name: 'Match',
     // route level code-splitting
