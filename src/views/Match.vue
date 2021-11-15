@@ -1,48 +1,56 @@
 <template>
   
   <div class="match">
-    <h1>Match</h1>
-    <n-button>naive-ui</n-button>
-
-    <div class="matched active">
-      <div class="icon">
-        <Icon />
+    <div class="matches">
+      <h1>Matches</h1>
+      <!-- <n-button>naive-ui</n-button> -->
+      <div class="row">
+        <Card />
+        <Card />
+        <Card />
+        <!-- <Card /> -->
       </div>
-      <div class="card">
-          <h3>NSE Tropical</h3>
-          <span>
-            Recently active, match now!
-          </span>
-      </div>
-          <!-- <template #cover>
-          
-          </template> -->
-
     </div>
 
-    <div class="matched">
-      <div class="icon">
-        <Icon />
+    <div class="messages">
+      <h2>Messages</h2>
+      <div class="matched active">
+        <div class="icon">
+          <Icon />
+        </div>
+        <div class="messagecontent">
+            <h3>NSE Tropical</h3>
+            <span>
+              Recently active, match now!
+            </span>
+        </div>
+            <!-- <template #cover>
+            
+            </template> -->
+
       </div>
-      <n-card title="Golden Communications">
-          <!-- <template #cover>
-            <Icon />
-          </template> -->
-          Click to match now!
-      </n-card>
+
+      <div class="matched">
+        <div class="icon">
+          <Icon />
+        </div>
+        <div class="messagecontent">
+            <h3>Golden Communications</h3>
+            Click to match now!
+        </div>
+      </div>
+
+      <div class="matched">
+        <div class="icon">
+          <Icon />
+        </div>
+        <div class="messagecontent">
+            <h3>Mojo Solutions</h3>
+            Click to match now!
+        </div>
+      </div>
     </div>
 
-    <div class="matched">
-      <div class="icon">
-        <Icon />
-      </div>
-      <n-card title="Mojo Solutions">
-          <!-- <template #cover>
-            <Icon />
-          </template> -->
-          Click to match now!
-      </n-card>
-    </div>
   </div>
 
 
@@ -50,14 +58,14 @@
 
 <script>
   import Icon from '@/components/Icon'
+  import Card from '@/components/Card'
   import { defineComponent } from 'vue'
   import { NButton } from 'naive-ui'
-  import { NCard } from 'naive-ui'
 
   export default defineComponent({
     components: {
       NButton,
-      NCard,
+      Card,
       Icon
     }
   })
@@ -72,15 +80,25 @@ h3 {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    text-align: left;
   }
-  .card {
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    /* width: 100vw; */
+    overflow:scroll;
+  }
+
+  .messagecontent {
     width: 100%;
     display: block;
     text-align: left;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     background-color: transparent;
     border: 0;
     padding: 12px;
+    
   }
   .n-card__content {
     padding-top: 0;
@@ -91,7 +109,7 @@ h3 {
     flex-direction: row;
     background-color: rgba(0,0,0,0.0);
     margin-bottom: 12px;
-    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(150,150,150,0.25);
   }
 
   .icon {
@@ -99,8 +117,9 @@ h3 {
     padding: 8px 12px;
     margin: -1px;
     /* flex-grow: 0; */
+    border-bottom: 1px solid rgba(250,250,250,0.95);
   }
   .active {
-    background-color: rgba(250,50,50,0.3);
+    /* background-color: rgba(250,50,50,0.3); */
   }
 </style>
