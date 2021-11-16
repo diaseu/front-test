@@ -1,6 +1,9 @@
 <template>
-  <div class="match">
-    <div class="matches">
+  <div class="Chat">
+    <div class="chatnav">
+
+    </div>
+    <div class="chathistory">
       <h1>Matches</h1>
       <!-- <n-button>naive-ui</n-button> -->
       <div class="row">
@@ -11,7 +14,7 @@
       </div>
     </div>
 
-    <div class="messages">
+    <div class="message">
       <h2>Messages</h2>
       <div class="matched active">
         <div class="icon">

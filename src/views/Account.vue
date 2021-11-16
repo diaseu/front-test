@@ -1,7 +1,6 @@
 <template>
   <div class="Account">
     <h1>Account</h1>
-    <section>
     <div class="user">
         <div class="userprofile"></div>
         <span>User Name</span>
@@ -14,20 +13,29 @@
       <router-link to="/searchsettings"><div class="icon">-</div>Search Settings</router-link>
       <router-link to="/acctsettings"><div class="icon">-</div>Account Settings</router-link>
     </div>
-  </section>
   </div>
 </template>
 
 
-<style>
+<style scoped>
+.Account {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+}
+
 a {
   text-decoration: none;
 }
 
 .user {
-  padding: 5vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .userprofile {
@@ -54,14 +62,6 @@ a {
   margin: 12px auto;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  color: black;
-  padding: 40px;
-  margin: 0;
-}
-
 span {
   text-transform: uppercase;
   font-weight: 700;
@@ -73,11 +73,13 @@ span {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 5vh;
+  padding: 0 5vh;
 }
 
 .settings {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 5vh;
 }
 </style>
