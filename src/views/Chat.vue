@@ -1,56 +1,19 @@
 <template>
   <div class="Chat">
-    <div class="chatnav">
 
+    <div class="chatnav">
+      <span>&lt; Back</span>
+      <h3>Company Name</h3>
+      <span>...</span>
     </div>
+
     <div class="chathistory">
-      <h1>Matches</h1>
-      <!-- <n-button>naive-ui</n-button> -->
-      <div class="row">
-        <Card />
-        <Card />
-        <Card />
-        <!-- <Card /> -->
-      </div>
+      <span>Hey there... </span>
     </div>
 
     <div class="message">
-      <h2>Messages</h2>
-      <div class="matched active">
-        <div class="icon">
-          <Icon />
-        </div>
-        <div class="messagecontent">
-            <h3>NSE Tropical</h3>
-            <span>
-              Recently active, match now!
-            </span>
-        </div>
-            <!-- <template #cover>
-            
-            </template> -->
-
-      </div>
-
-      <div class="matched">
-        <div class="icon">
-          <Icon />
-        </div>
-        <div class="messagecontent">
-            <h3>Golden Communications</h3>
-            Click to match now!
-        </div>
-      </div>
-
-      <div class="matched">
-        <div class="icon">
-          <Icon />
-        </div>
-        <div class="messagecontent">
-            <h3>Mojo Solutions</h3>
-            Click to match now!
-        </div>
-      </div>
+      <!-- <h2>Messages</h2> -->
+      <span>Type messages here...</span>
     </div>
 
   </div>
@@ -73,16 +36,31 @@
   })
 </script>
 
-<style scoped>
-h3 {
-  margin: 0;
-}
-  .match {
+<style lang="scss">
+  h3 {
+    margin: 0;
+  }
+  .Chat {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    /* padding: 20px; */
     text-align: left;
+  }
+
+  .chatnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    width: 100%;
+    & > * {
+      padding: 10px;
+    }
+  }
+
+  .chathistory {
+    padding: 20px;
   }
 
   .row {
@@ -92,13 +70,16 @@ h3 {
     overflow:scroll;
   }
 
-  .messagecontent {
+  .message {
+    position: relative;
+    bottom: 0;
+    height: 10vh;
     width: 100%;
     display: block;
     text-align: left;
     /* margin-bottom: 10px; */
     background-color: transparent;
-    border: 0;
+    border: 1px solid #ccc;
     padding: 12px;
     
   }

@@ -1,8 +1,10 @@
 <template>
+  <router-link to="/chat">
   <div class="card">
     <div class="cardimg"></div>
     <h3>Target, Inc</h3>
   </div>
+  </router-link>
 </template>
 
 <script>
