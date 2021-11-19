@@ -43,9 +43,10 @@
   .Chat {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     /* padding: 20px; */
     text-align: left;
+    height: 90%;
   }
 
   .chatnav {
@@ -61,6 +62,8 @@
 
   .chathistory {
     padding: 20px;
+    flex: 1;
+    overflow: auto;
   }
 
   .row {
@@ -73,7 +76,7 @@
   .message {
     position: relative;
     bottom: 0;
-    height: 10vh;
+    min-height: 60px;
     width: 100%;
     display: block;
     text-align: left;
